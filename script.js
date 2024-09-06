@@ -11,6 +11,7 @@ async function handleFetch() {
     let pokemonName = data.name;
     let pokemonIndex = data.game_indices[0].game_index;
     let pokemonAbility = data.abilities[0].ability.name;
+    let pokemonType = data.types[0].type.name;
     let imgURL = data.sprites.front_default;
     console.log(imgURL);
     console.log(pokemonName);
@@ -21,8 +22,9 @@ async function handleFetch() {
             <h2>${pokemonName}</h2>
             <p>Index: ${pokemonIndex}</p>
             <p>Ability: ${pokemonAbility}</p>
+            <p>Type: ${pokemonType}</p> 
         </div>
     </div>`;
 }
 
-fetchButton.addEventListener("click", handleFetch);15
+fetchButton.addEventListener("click", handleFetch);
